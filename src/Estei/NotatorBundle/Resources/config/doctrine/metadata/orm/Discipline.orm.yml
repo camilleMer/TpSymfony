@@ -1,0 +1,56 @@
+Discipline:
+    type: entity
+    table: discipline
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        content:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+    manyToMany:
+        classroom:
+            targetEntity: Classroom
+            cascade: {  }
+            mappedBy: null
+            inversedBy: discipline
+            joinTable:
+                name: classroom_discipline
+                joinColumns:
+                    -
+                        name: discipline_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: classroom_id
+                        referencedColumnName: id
+            orderBy: null
+        teacher:
+            targetEntity: Teacher
+            cascade: {  }
+            mappedBy: null
+            inversedBy: discipline
+            joinTable:
+                name: discipline_teacher
+                joinColumns:
+                    -
+                        name: discipline_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: teacher_id
+                        referencedColumnName: id
+            orderBy: null
+    lifecycleCallbacks: {  }

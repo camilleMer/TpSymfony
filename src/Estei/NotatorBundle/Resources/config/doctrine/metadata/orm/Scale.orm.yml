@@ -1,0 +1,25 @@
+Scale:
+    type: entity
+    table: scale
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+        createdAt:
+            type: datetime
+            nullable: true
+            column: created_at
+        updated:
+            type: datetime
+            nullable: true
+    lifecycleCallbacks: {  }

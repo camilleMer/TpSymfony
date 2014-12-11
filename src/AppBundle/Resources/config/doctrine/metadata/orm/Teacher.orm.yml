@@ -1,0 +1,50 @@
+Teacher:
+    type: entity
+    table: teacher
+    indexes:
+        fk_teacher_user1_idx:
+            columns:
+                - user_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    manyToOne:
+        user:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                user_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        class:
+            targetEntity: Class
+            cascade: {  }
+            mappedBy: null
+            inversedBy: teacher
+            joinTable:
+                name: class_teacher
+                joinColumns:
+                    -
+                        name: teacher_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: class_id
+                        referencedColumnName: id
+            orderBy: null
+        discipline:
+            targetEntity: Discipline
+            cascade: {  }
+            mappedBy: teacher
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

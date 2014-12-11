@@ -1,0 +1,4 @@
+services:
+#    estei_notator.example:
+#        class: Estei\NotatorBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

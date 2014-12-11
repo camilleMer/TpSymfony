@@ -1,0 +1,54 @@
+Classroom:
+    type: entity
+    table: classroom
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+        level:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+    manyToMany:
+        assessment:
+            targetEntity: Assessment
+            cascade: {  }
+            mappedBy: null
+            inversedBy: classroom
+            joinTable:
+                name: assessment_classroom
+                joinColumns:
+                    -
+                        name: classroom_id
+                        referencedColumnName: id
+                inverseJoinColumns:
+                    -
+                        name: assessment_id
+                        referencedColumnName: id
+            orderBy: null
+        discipline:
+            targetEntity: Discipline
+            cascade: {  }
+            mappedBy: classroom
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+        teacher:
+            targetEntity: Teacher
+            cascade: {  }
+            mappedBy: classroom
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

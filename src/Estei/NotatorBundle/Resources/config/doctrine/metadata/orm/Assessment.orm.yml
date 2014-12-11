@@ -1,0 +1,73 @@
+Assessment:
+    type: entity
+    table: assessment
+    indexes:
+        fk_assessment_period1_idx:
+            columns:
+                - period_id
+        fk_assessment_discipline1_idx:
+            columns:
+                - discipline_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+        content:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+        coefficient:
+            type: integer
+            nullable: true
+            unsigned: false
+        assessmentDate:
+            type: string
+            nullable: true
+            length: 45
+            fixed: false
+            column: assessment_date
+        created:
+            type: datetime
+            nullable: true
+        updated:
+            type: datetime
+            nullable: true
+    manyToOne:
+        period:
+            targetEntity: Period
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                period_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        discipline:
+            targetEntity: Discipline
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                discipline_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    manyToMany:
+        classroom:
+            targetEntity: Classroom
+            cascade: {  }
+            mappedBy: assessment
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }

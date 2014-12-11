@@ -1,0 +1,42 @@
+Criteria:
+    type: entity
+    table: criteria
+    indexes:
+        fk_criteria_scale1_idx:
+            columns:
+                - scale_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        name:
+            type: string
+            nullable: false
+            length: 45
+            fixed: false
+        content:
+            type: text
+            nullable: true
+            length: 65535
+            fixed: false
+        coefficient:
+            type: integer
+            nullable: false
+            unsigned: false
+            default: '1'
+    manyToOne:
+        scale:
+            targetEntity: Scale
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                scale_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }

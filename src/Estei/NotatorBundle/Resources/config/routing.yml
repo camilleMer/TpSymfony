@@ -1,0 +1,3 @@
+estei_notator_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: EsteiNotatorBundle:Default:index }

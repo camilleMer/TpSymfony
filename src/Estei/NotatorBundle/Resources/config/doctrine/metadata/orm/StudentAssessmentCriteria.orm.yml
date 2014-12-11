@@ -1,0 +1,55 @@
+StudentAssessmentCriteria:
+    type: entity
+    table: student_assessment_criteria
+    indexes:
+        fk_student_assessment_criteria_criteria1_idx:
+            columns:
+                - criteria_id
+        fk_student_assessment_criteria_student1_idx:
+            columns:
+                - student_id
+        fk_student_assessment_criteria_assessment1_idx:
+            columns:
+                - assessment_id
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        mark:
+            type: integer
+            nullable: true
+            unsigned: false
+    manyToOne:
+        criteria:
+            targetEntity: Criteria
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                criteria_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        student:
+            targetEntity: Student
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                student_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+        assessment:
+            targetEntity: Assessment
+            cascade: {  }
+            mappedBy: null
+            inversedBy: null
+            joinColumns:
+                assessment_id:
+                    referencedColumnName: id
+            orphanRemoval: false
+    lifecycleCallbacks: {  }
