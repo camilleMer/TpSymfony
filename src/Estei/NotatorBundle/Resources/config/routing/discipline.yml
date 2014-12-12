@@ -1,0 +1,30 @@
+discipline:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:index" }
+
+discipline_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:show" }
+
+discipline_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:new" }
+
+discipline_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:create" }
+    requirements: { _method: post }
+
+discipline_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:edit" }
+
+discipline_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:update" }
+    requirements: { _method: post|put }
+
+discipline_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Discipline:delete" }
+    requirements: { _method: post|delete }

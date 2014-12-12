@@ -1,0 +1,30 @@
+studentassessmentcriteria:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:index" }
+
+studentassessmentcriteria_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:show" }
+
+studentassessmentcriteria_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:new" }
+
+studentassessmentcriteria_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:create" }
+    requirements: { _method: post }
+
+studentassessmentcriteria_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:edit" }
+
+studentassessmentcriteria_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:update" }
+    requirements: { _method: post|put }
+
+studentassessmentcriteria_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:StudentAssessmentCriteria:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+classroom:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:index" }
+
+classroom_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:show" }
+
+classroom_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:new" }
+
+classroom_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:create" }
+    requirements: { _method: post }
+
+classroom_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:edit" }
+
+classroom_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:update" }
+    requirements: { _method: post|put }
+
+classroom_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Classroom:delete" }
+    requirements: { _method: post|delete }

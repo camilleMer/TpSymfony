@@ -1,3 +1,51 @@
+estei_notator_user:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+estei_notator_teacher:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/teacher.yml"
+    prefix:   /teacher
+
+estei_notator_studentassessmentcriteria:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/studentassessmentcriteria.yml"
+    prefix:   /studentassessmentcriteria
+
+estei_notator_student:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/student.yml"
+    prefix:   /student
+
+estei_notator_step:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/step.yml"
+    prefix:   /step
+
+estei_notator_scale:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/scale.yml"
+    prefix:   /scale
+
+estei_notator_period:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/period.yml"
+    prefix:   /period
+
+estei_notator_discipline:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/discipline.yml"
+    prefix:   /discipline
+
+estei_notator_criteria:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/criteria.yml"
+    prefix:   /criteria
+
+estei_notator_classroom:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/classroom.yml"
+    prefix:   /classroom
+
+estei_notator_assessment:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/assessment.yml"
+    prefix:   /assessment
+
+estei_notator_author:
+    resource: "@EsteiNotatorBundle/Resources/config/routing/assessment.yml"
+    prefix:   /assessment
+
 estei_notator_homepage:
     path:     /hello/{name}
     defaults: { _controller: EsteiNotatorBundle:Default:index }

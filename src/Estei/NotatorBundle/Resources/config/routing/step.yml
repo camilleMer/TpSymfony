@@ -1,0 +1,30 @@
+step:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Step:index" }
+
+step_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Step:show" }
+
+step_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Step:new" }
+
+step_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Step:create" }
+    requirements: { _method: post }
+
+step_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Step:edit" }
+
+step_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Step:update" }
+    requirements: { _method: post|put }
+
+step_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Step:delete" }
+    requirements: { _method: post|delete }

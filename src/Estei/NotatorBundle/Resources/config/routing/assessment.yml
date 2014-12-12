@@ -1,0 +1,30 @@
+assessment:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:index" }
+
+assessment_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:show" }
+
+assessment_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:new" }
+
+assessment_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:create" }
+    requirements: { _method: post }
+
+assessment_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:edit" }
+
+assessment_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:update" }
+    requirements: { _method: post|put }
+
+assessment_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Assessment:delete" }
+    requirements: { _method: post|delete }
