@@ -1,0 +1,30 @@
+student:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Student:index" }
+
+student_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Student:show" }
+
+student_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Student:new" }
+
+student_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Student:create" }
+    requirements: { _method: post }
+
+student_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Student:edit" }
+
+student_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Student:update" }
+    requirements: { _method: post|put }
+
+student_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Student:delete" }
+    requirements: { _method: post|delete }

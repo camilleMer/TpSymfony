@@ -1,0 +1,30 @@
+period:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Period:index" }
+
+period_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Period:show" }
+
+period_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Period:new" }
+
+period_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Period:create" }
+    requirements: { _method: post }
+
+period_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Period:edit" }
+
+period_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Period:update" }
+    requirements: { _method: post|put }
+
+period_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Period:delete" }
+    requirements: { _method: post|delete }

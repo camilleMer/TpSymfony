@@ -1,0 +1,30 @@
+scale:
+    path:     /
+    defaults: { _controller: "EsteiNotatorBundle:Scale:index" }
+
+scale_show:
+    path:     /{id}/show
+    defaults: { _controller: "EsteiNotatorBundle:Scale:show" }
+
+scale_new:
+    path:     /new
+    defaults: { _controller: "EsteiNotatorBundle:Scale:new" }
+
+scale_create:
+    path:     /create
+    defaults: { _controller: "EsteiNotatorBundle:Scale:create" }
+    requirements: { _method: post }
+
+scale_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "EsteiNotatorBundle:Scale:edit" }
+
+scale_update:
+    path:     /{id}/update
+    defaults: { _controller: "EsteiNotatorBundle:Scale:update" }
+    requirements: { _method: post|put }
+
+scale_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "EsteiNotatorBundle:Scale:delete" }
+    requirements: { _method: post|delete }
